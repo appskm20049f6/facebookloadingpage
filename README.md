@@ -1,6 +1,7 @@
-# Facebook留言抽獎工具（ttkbootstrap美化版）
+# Facebook 留言抽獎工具（ttkbootstrap 美化版）
 
 ## 特色
+
 - 支援 Facebook 粉專/個人貼文留言全自動抓取
 - 可依留言關鍵字、留言時間區間過濾
 - 時間選擇器穩定美觀（ttkbootstrap.DateEntry）
@@ -8,6 +9,7 @@
 - 介面現代化、操作簡單
 
 ## 使用方式
+
 1. 安裝 Python 3.8+，建議 3.10/3.11
 2. 安裝必要套件：
    ```bash
@@ -29,12 +31,14 @@
    - 結果區塊可直接複製到 Excel
 
 ## 注意事項
+
 - 權杖需有貼文/留言存取權限，建議用粉專長權杖
 - 請勿將 `.env` 檔案上傳到 git 或公開空間，已預設加入 `.gitignore`
 - 若留言數量龐大，抓取需耐心等待
 - 若遇到 Facebook API 限制，請稍後再試
 
 ## 介面預覽
+
 ![介面預覽](screenshot.png)
 
 ---
