@@ -1,3 +1,8 @@
+import webbrowser
+def open_token_tool():
+    url = "https://developers.facebook.com/tools/explorer/"
+    webbrowser.open(url)
+    show_error("取得權杖說明", "已開啟Facebook權杖工具，請登入並複製ACCESS_TOKEN到 .env 檔案！")
 
 import os
 from dotenv import load_dotenv
@@ -172,6 +177,7 @@ root.resizable(False, False)
 main_frame = tb.Frame(root, padding=20)
 main_frame.pack(fill="both", expand=True)
 
+
 # 關鍵字搜尋欄
 search_frame = tb.Frame(main_frame)
 search_frame.pack(anchor="w", pady=(0, 5))
@@ -180,6 +186,9 @@ entry_post_keyword = tb.Entry(search_frame, width=20)
 entry_post_keyword.pack(side="left", padx=(0, 5))
 reload_posts_btn = tb.Button(search_frame, text="搜尋/重載", command=reload_posts, bootstyle="info")
 reload_posts_btn.pack(side="left")
+# 取得權杖按鈕
+get_token_btn = tb.Button(search_frame, text="取得權杖", command=open_token_tool, bootstyle="warning")
+get_token_btn.pack(side="left", padx=(10,0))
 
 # 預設先載入全部
 posts = fetch_posts(ACCESS_TOKEN, limit=100)
